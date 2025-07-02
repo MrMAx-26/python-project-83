@@ -1,7 +1,7 @@
 import os
 
 import requests
-from dotenv import load
+from dotenv import load_dotenv
 from flask import (
     Flask,
     abort,
@@ -16,7 +16,7 @@ from .data_base import UrlRepository
 from .normalize_url import normalize_url, validate_url
 from .parser import get_data
 
-load()
+load_dotenv()
 
 DATABASE_URL = os.getenv('DATABASE_URL')
 SECRET_KEY = os.getenv('SECRET_KEY')
