@@ -5,3 +5,4 @@ demo.cast
 .coverage
 coverage.xml
 venv/
+.env
