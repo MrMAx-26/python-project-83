@@ -25,6 +25,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = SECRET_KEY
 app.config['DATABASE_URL'] = DATABASE_URL
 
+
 repo = UrlRepository(DATABASE_URL)
 
 
@@ -94,6 +95,11 @@ def url_checks(id):
     finally:
 
         return redirect(url_for('url', id=id))
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
 
 
 if __name__ == '__main__':
