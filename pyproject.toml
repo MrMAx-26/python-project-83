@@ -1,7 +1,7 @@
 [project]
 name = "hexlet-code"
 version = "0.1.0"
-description = "Add your description here"
+description = "Webpage Analyzer is an online tool that assesses the compatibility of web pages with SEO practices, much like the functionality offered by PageSpeed Insights."
 authors = [
 	{ name = "Maxim Shevtsov", email= "Shevtsov_stv@mail.ru" }
 ]
