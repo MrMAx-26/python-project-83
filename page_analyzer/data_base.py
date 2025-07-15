@@ -88,9 +88,12 @@ class UrlRepository:
         self.open_connection()
         with self.conn.cursor(cursor_factory=NamedTupleCursor) as cursor:
             cursor.execute(
-                'INSERT INTO url_checks (url_id, status_code, h1, title, description)'
-                'VALUES (%(url_id)s, %(status_code)s, %(h1)s, %(title)s, %(description)s)'
-                'RETURNING id',
+                'INSERT INTO url_checks \
+                (url_id, status_code, h1, title, description) \
+                VALUES \
+                (%(url_id)s, %(status_code)s, %(h1)s, %(title)s,\
+                 %(description)s) \
+                RETURNING id',
                 data
             )
             self.conn.commit()
